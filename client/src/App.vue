@@ -48,6 +48,11 @@ body {
   margin: 0;
   padding: 0;
 }
+
+input, select, textarea{
+    color: #fff !important;
+}
+
 h1,
 h2,
 h3,
