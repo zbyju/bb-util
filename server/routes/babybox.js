@@ -13,6 +13,9 @@ router.get("/", (req, res) => {
     if(data.babyboxData && data.babyboxData.id) {
         id = ++data.babyboxData.id
     }
+    if(!babyboxTime || typeof babyboxTime === 'undefined' || isNaN(babyboxTime)) { //If data are not coming from babybox, then dont update
+        return
+    }
     data.babyboxData = {
         id,
         time,
