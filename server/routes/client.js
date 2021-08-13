@@ -22,7 +22,6 @@ router.get("/config", (req, res) => {
 router.put("/config", (req, res) => {
     req.body.config.startup.pathToProgram = path.join(req.body.config.startup.pathToProgramFolder, "\\SWMP\\index.html")
     req.body.config.startup.pathToProgramSettings = path.join(req.body.config.startup.pathToProgramFolder, "\\BBNP\\bbnp.html")
-    console.log(req.body.config.startup.pathToProgram)
     _.merge(data.config, req.body.config)
     fs.writeFile("config/config.json", JSON.stringify(data.config), (err) => {
         if(err) {
