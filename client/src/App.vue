@@ -148,7 +148,7 @@ h1.title {
   margin-top: -10px;
 }
 .mt-n4 {
-  margin-top: -15px;
+  margin-top: -12px;
 }
 .mt-n5 {
   margin-top: -25px;
