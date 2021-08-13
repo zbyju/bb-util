@@ -34,4 +34,4 @@ Software pro vylepšení prostředí, na kterém poběží monitorovací panel p
 
 ## Po instalaci
 1. Při prvním spuštění je potřeba povolit pravidlo Firewallu, na které se program sám dotáže při prvním spuštění. Toto okno stačí potvrdit.
-2. Pro úspěšné použití pro starý program je potřeba přepsat proměnnou `J3` v `index.html` na hodnotu: `http://localhost:3000/server/babybox/`
+2. Pro úspěšné použití pro starý program je potřeba přepsat proměnnou `J3` v `index.html` na hodnotu: `"http://localhost:3000/server/babybox?time="`
