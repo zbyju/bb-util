@@ -7,6 +7,15 @@
       <div class="switch switch-title">
         <vs-switch v-model="config.turnedOn" />
       </div>
+      <vs-col w="1" class="pl-5">
+        <vs-tooltip right color="#000">
+          <vs-button flat>Nefunguje</vs-button>
+          <template #tooltip>
+            Přepsat proměnnou J3 na hodnotu =
+            "http://localhost:3000/server/babybox?time="
+          </template>
+        </vs-tooltip>
+      </vs-col>
     </vs-row>
     <template v-if="config.turnedOn">
       <vs-row align="center">
@@ -69,11 +78,20 @@
 
       <vs-row align="center" class="mt-7">
         <vs-col w="6">
-          <vs-input primary label="Příkaz vykonán po překročení hranice" placeholder="Výchozí: shutdown -r -t 60" v-model="config.commandToExecuteWhenError" />
+          <vs-input
+            primary
+            label="Příkaz vykonán po překročení hranice"
+            placeholder="Výchozí: shutdown -r -t 60"
+            v-model="config.commandToExecuteWhenError"
+          />
         </vs-col>
         <vs-col w="6" class="pl-5">
           <vs-tooltip right color="#000">
-            <a color="#000" href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/shutdown" target="_blank">
+            <a
+              color="#000"
+              href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/shutdown"
+              target="_blank"
+            >
               <vs-button flat>Pomoc</vs-button>
             </a>
             <template #tooltip>
@@ -100,13 +118,13 @@ export default {
   name: "Startup",
   computed: {
     config() {
-      if(this.$store.state.editedConfig == null) {
-        this.$store.commit("mergeEditedConfig")
+      if (this.$store.state.editedConfig == null) {
+        this.$store.commit("mergeEditedConfig");
       }
-      return this.$store.state.editedConfig.restart
+      return this.$store.state.editedConfig.restart;
     },
     valid() {
-      return this.$store.state.valid.restart
+      return this.$store.state.valid.restart;
     }
   },
   methods: {
@@ -114,13 +132,13 @@ export default {
       this.$refs.fileInput.click();
     },
     validateMaxTimeDifference(value) {
-      this.valid.maxTimeDifference = /^\d+$/.test(value) && value > 0
+      this.valid.maxTimeDifference = /^\d+$/.test(value) && value > 0;
     },
     validateDelayToNextRestart(value) {
-      this.valid.delayToNextRestart = /^\d+$/.test(value) && value > 0
+      this.valid.delayToNextRestart = /^\d+$/.test(value) && value > 0;
     },
     validateErrorsInRowToRestart(value) {
-      this.valid.errorsInRowToRestart = /^\d+$/.test(value) && value > 0
+      this.valid.errorsInRowToRestart = /^\d+$/.test(value) && value > 0;
     }
   }
 };
@@ -128,16 +146,16 @@ export default {
 
 <style scoped lang="scss">
 .Startup {
-    .switch {
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-    }
-    .switch-title {
-        margin-bottom: 0.85em;
-    }
-    .vs-switch {
-        margin-left: 20px;
-    }
+  .switch {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .switch-title {
+    margin-bottom: 0.85em;
+  }
+  .vs-switch {
+    margin-left: 20px;
+  }
 }
 </style>
