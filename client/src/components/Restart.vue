@@ -9,10 +9,10 @@
       </div>
       <vs-col w="1" class="pl-4 mt-n4">
         <vs-tooltip right color="#000">
-          <vs-button flat>Nefunguje</vs-button>
+          <vs-button flat>Nefunguje?</vs-button>
           <template #tooltip>
-            Přepsat proměnnou J3 na hodnotu =
-            "http://localhost:3000/server/babybox?time="
+            Pokud restart nefunguje, pak je potřeba přepsat proměnnou J3 na
+            hodnotu = "http://localhost:3000/server/babybox?time="
           </template>
         </vs-tooltip>
       </vs-col>
