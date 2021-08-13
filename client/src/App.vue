@@ -1,9 +1,9 @@
 <template>
   <div id="app">
     <h1 class="title">BB Utility</h1>
-    <Utility class="mt-10"/>
-    <Form class="mt-10"/>
-    <RestartInfo class="mt-10" v-if="this.$store.state.data.length > 0"/>
+    <Utility class="mt-10" />
+    <Form class="mt-10" />
+    <RestartInfo class="mt-10" v-if="this.$store.state.data.length > 0" />
   </div>
 </template>
 
@@ -20,11 +20,11 @@ export default {
     RestartInfo
   },
   async created() {
-    await this.$store.dispatch("getConfig")
+    await this.$store.dispatch("getConfig");
 
     setInterval(async () => {
-      await this.$store.dispatch("getData")
-    }, 5000)
+      await this.$store.dispatch("getData");
+    }, 5000);
   }
 };
 </script>
@@ -37,7 +37,7 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  --vs-text: rgb(255,255,255) !important;
+  --vs-text: rgb(255, 255, 255) !important;
 }
 html {
   min-height: 100vh;
@@ -49,8 +49,10 @@ body {
   padding: 0;
 }
 
-input, select, textarea{
-    color: #fff !important;
+input,
+select,
+textarea {
+  color: #fff !important;
 }
 
 h1,
@@ -71,14 +73,16 @@ p {
   padding: 75px 100px;
 
   input {
-    background-color: rgb(20, 20, 23)
+    background-color: rgb(20, 20, 23);
   }
   .vs-input {
-    width: 100%
+    width: 100%;
   }
 }
 
-a, a:hover, a:focus {
+a,
+a:hover,
+a:focus {
   text-decoration: none;
   color: inherit;
 }
@@ -134,7 +138,25 @@ h1.title {
   margin-right: 50px;
 }
 
+.mt-n1 {
+  margin-top: -3px;
+}
+.mt-n2 {
+  margin-top: -5px;
+}
+.mt-n3 {
+  margin-top: -10px;
+}
+.mt-n4 {
+  margin-top: -15px;
+}
+.mt-n5 {
+  margin-top: -25px;
+}
 
+.pl-4 {
+  padding-left: 15px;
+}
 .pl-5 {
   padding-left: 25px;
 }
@@ -143,6 +165,6 @@ h1.title {
 }
 
 .vs-card {
-  background-color: rgb(20,20,23) !important;
+  background-color: rgb(20, 20, 23) !important;
 }
 </style>
