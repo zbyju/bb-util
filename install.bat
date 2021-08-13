@@ -2,11 +2,11 @@
 call npm install pm2 -g
 
 @REM Create link and move it to the desktop
-call mklink "Babybox" "startup.bat"
+call mklink "Babybox" "start.bat"
 call move "Babybox" "%userprofile%\desktop\Babybox"
 
 @REM Create link and move it to the startup folder
-call mklink "Babybox" "startup.bat"
+call mklink "Babybox" "start.bat"
 call move "Babybox" "%userprofile%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\Babybox"
 
 @REM Install server
