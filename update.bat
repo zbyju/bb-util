@@ -8,6 +8,7 @@ call npm install
 @REM Install client
 call cd ../client
 call npm install
+call cd ..
 
 @REM Restart BB-Util
 call pm2 delete index
