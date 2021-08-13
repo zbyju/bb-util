@@ -7,7 +7,7 @@
       <div class="switch switch-title">
         <vs-switch v-model="config.turnedOn" />
       </div>
-      <vs-col w="1" class="pl-5">
+      <vs-col w="1" class="pl-4 mt-n4">
         <vs-tooltip right color="#000">
           <vs-button flat>Nefunguje</vs-button>
           <template #tooltip>
