@@ -32,6 +32,7 @@
       <vs-col w="6" class="pl-5">
         <vs-row>
           <vs-button @click="insertDefaultIEPath">Doplnit cestu IE</vs-button>
+          <vs-button @click="insertDefaultEdgePath">Doplnit cestu Edge</vs-button>
           <vs-button @click="insertDefaultFirefoxPath"
             >Doplnit cestu Firefox</vs-button
           >
@@ -71,6 +72,11 @@ export default {
     insertDefaultFirefoxPath() {
       this.config.pathToBrowser =
         "C:\\Program Files\\Mozilla Firefox\\firefox.exe";
+      ++this.browserKey;
+    },
+    insertDefaultEdgePath() {
+      this.config.pathToBrowser =
+        "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe";
       ++this.browserKey;
     }
   }
