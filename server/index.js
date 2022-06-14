@@ -14,6 +14,8 @@ global.appRoot = path.resolve(__dirname);
 
 const app = express()
 
+app.use(cors())
+
 if(process.env.NODE_ENV !== 'production') {
     console.log("Server is running in development!")
         
@@ -21,10 +23,6 @@ if(process.env.NODE_ENV !== 'production') {
     app.set('trust proxy', function(){ return true; });
     app.use(morgan(':method :url :status :res[content-length] - :response-time ms :remote-addr'))
 }
-
-
-//Cors
-app.use(cors())
 
 //Body-parser
 app.use(bodyParser.urlencoded({ extended: true }))

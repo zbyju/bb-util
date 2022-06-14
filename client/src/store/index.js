@@ -100,6 +100,7 @@ export default new Vuex.Store({
             resolve(data.config);
           })
           .catch(err => {
+            console.log(err)
             reject(err);
           });
       });
