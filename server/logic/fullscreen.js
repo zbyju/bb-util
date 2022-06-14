@@ -1,5 +1,6 @@
-
+const sendkeys = require('sendkeys')
 
 module.exports = function pressF11() {
-    robot.keyTap("enter");
+    console.log("Sending key")
+    sendkeys.sync("a")
 }

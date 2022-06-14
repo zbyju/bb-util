@@ -69,7 +69,7 @@ function init() {
         }
         setTimeout(() => {
             pressF11()
-        }, 1000 * 60)
+        }, 1000 * 1)
     }, 5000)
 }
 init()
