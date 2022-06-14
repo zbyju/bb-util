@@ -1,1 +1,26 @@
-{"restart":{"turnedOn":true,"abortRestartIfOk":true,"maxTimeDifference":"15","delayToNextRestart":"500","errorsInRowToRestart":"2","commandToExecuteWhenError":"shutdown -r -t 60","commandToExecuteWhenOk":"shutdown -a"},"startup":{"pathToProgramFolder":"C:\\BB\\","pathToProgram":"C:\\BB\\/\\SWMP\\index.html","pathToProgramSettings":"C:\\BB\\/\\BBNP\\bbnp.html","pathToBrowser":"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe"},"other":{"SDSMotory":"10.1.1.5","SDSTopeni":"10.1.1.7","Camera":"10.1.1.7"}}
+{
+    "restart": {
+        "turnedOn": true,
+        "abortRestartIfOk": true,
+        "maxTimeDifference": "15",
+        "delayToNextRestart": "500",
+        "errorsInRowToRestart": "2",
+        "commandToExecuteWhenError": "shutdown -r -t 60",
+        "commandToExecuteWhenOk": "shutdown -a"
+    },
+    "startup": {
+        "enabled": true,
+        "pathToProgramFolder": "C:\\BB\\",
+        "pathToProgram": "C:\\BB\\SWMP\\index.html",
+        "pathToProgramSettings": "C:\\BB\\BBNP\\bbnp.html",
+        "pathToBrowser": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe"
+    },
+    "other": {
+        "SDSMotory": "10.1.1.5",
+        "SDSTopeni": "10.1.1.6",
+        "Camera": "10.1.1.7"
+    },
+    "fullscreen": {
+        "enabled": true
+    }
+}
