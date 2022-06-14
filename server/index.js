@@ -67,9 +67,11 @@ function init() {
         if(data.config.restart.turnedOn) {
             restart()
         }
-        setTimeout(() => {
-            pressF11()
-        }, 1000 * 1)
+        if(data.config.fullscreen.enabled === true) {
+            setTimeout(() => {
+                pressF11()
+            }, 1000 * 60) // one minute after startup
+        }
     }, 5000)
 }
 init()
