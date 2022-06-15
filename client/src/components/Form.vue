@@ -3,7 +3,6 @@
     <h1>Nastavení</h1>
     <template v-if="configLoaded">
       <Startup />
-      <Fullscreen />
       <Restart />
       <OtherSettings />
       <vs-button success gradient class="submit" @click="submit">
@@ -18,7 +17,6 @@ import Startup from "./Startup";
 import Restart from "./Restart";
 import OtherSettings from "./OtherSettings";
 import _ from "lodash";
-import Fullscreen from "./Fullscreen.vue";
 
 export default {
   name: "Form",
@@ -46,7 +44,6 @@ export default {
     Startup,
     Restart,
     OtherSettings,
-    Fullscreen
 },
   methods: {
     async submit() {
