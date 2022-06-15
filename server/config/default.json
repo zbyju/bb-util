@@ -11,7 +11,7 @@
     "startup": {
         "enabled": true,
         "pathToProgramFolder": "C:\\BB\\",
-        "pathToProgram": "C:\\BB\\SWMP\\index.html",
+        "pathToProgram": "",
         "pathToProgramSettings": "C:\\BB\\BBNP\\bbnp.html",
         "pathToBrowser": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe"
     },
