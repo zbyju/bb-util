@@ -12,9 +12,9 @@ module.exports = function Startup() {
     }
 
     isRunning(browser, status => {
-        if(!status) {
+        // if(!status) {
             exec(`start "" "${ data.config.startup.pathToBrowser }" "${ data.config.startup.pathToProgram }"`)
-        }
+        // }
     })
 }
 
