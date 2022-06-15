@@ -9,7 +9,6 @@ const path = require("path")
 const serverConfig = require("./config/server")
 const data = require("./data")
 const startup = require("./logic/startup")
-const pressF11 = require("./logic/fullscreen")
 
 global.appRoot = path.resolve(__dirname);
 
@@ -67,9 +66,6 @@ function init() {
         if(data.config.restart.turnedOn) {
             restart()
         }
-        setTimeout(() => {
-            pressF11()
-        }, 1000 * 1)
     }, 5000)
 }
 init()
